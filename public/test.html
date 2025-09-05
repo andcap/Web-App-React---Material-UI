@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=100.0">
+        <title>Documento HTML5</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    </head>
+<body class="riquadro">
+    <datalist id="persone">
+        <option value="Luca">
+        <option value="Marco">
+        <option value="Giovanni">
+    </datalist>
+    <header>
+        <!--commento-->
+        <h1>Benvenuto</h1>
+        <p dir="rtl">This arabic word ARABIC_PLACEHOLDER is automatically displayed right-to-left.</p>
+        <script>
+            function myFunction(ev) {
+            alert(ev.target.innerText);
+            }
+        </script>        
+    </header>
+    <main>
+        <h2>Sezione Principale 5</h2>
+        <div dir="rtl">
+            <p >
+                Questa è una struttura base HTML5 <i class="bi bi-star">Ciao come stai</i>
+                <span class="material-symbols-outlined">star</span>
+            </p>
+            <a target="_blank" href="https://www.cgn.it">inviami una mail</a>
+        </div>
+        <div class="riquadro">   
+            <p>Questa è una struttura base HTML5.</p>
+            <a target="_blank" href="https://www.cgn.it">inviami una mail</a>
+            <ol reversed type="I" onclick="myFunction(event)">
+                <li><button>ciao1</button></li>
+                <li><button>ciao2</button></li>
+                <li><button>ciao3</button></li>
+            </ol>
+            <ul>
+                <li>Elemento 3</li>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ul>
+            <table border="1">
+                <tr>
+                    <th colspan="2">Tabella di esempio</th>
+                </tr>
+                <tr>
+                    <th>Intestazione 1</th>
+                    <th>Intestazione 2</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td>Dati 1</td>
+                    <td>Dati 2</td>
+                </tr>
+            </table>
+            <form action="http://example.com/test" method="post" target="_blank">
+                <label for="input1">Input 1:</label>
+                <input type="text" id="input1" name="input1">
+                <label for="input2">Input 2:</label>
+                <input type="datetime-local" id="input2" name="input2">
+                <label for="input3">Input 3:</label>
+                <input list="persone" id="input3" name="input3">
+                <label>Email
+                    <input type="email" multiple id="input4" name="input4" placeholder="Inserisci email">
+                </label>
+                <fieldset class="riquadro">
+                    <legend>Informazioni aggiuntive</legend>
+                    <label for="input5">Input 5:</label>
+                    <input type="text" id="input5" name="input5">
+                </fieldset>
+                <fieldset class="riquadro">
+                    <legend>Informazioni aggiuntive</legend>
+                    <label for="input6">Input 6:</label>
+                    <input type="radio" id="input6" name="input6" value="opzione1" />
+                    <label for="input7">Input 7:</label>
+                    <input type="radio" id="input7" name="input7" value="opzione1" />
+                </fieldset>
+                <input type="submit" value="Invia">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024</p>
+    </footer>
+</body>
+</html>

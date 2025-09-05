@@ -1,0 +1,7 @@
+installa node.js
+npm install -g create-react-app
+cd cartella dove creare l'applicazione react
+npx create-react-app react-mui-demo --template typescript
+cd .\react-mui-demo
+npm start (e poi chiudere con ^C)
+npm install @mui/material @emotion/react @emotion/styled @mui/icons-material (installarla nella cartella dell'applicazione)

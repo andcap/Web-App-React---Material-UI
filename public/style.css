@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.riquadro {
+    border: 2px solid #1976d2; /* colore e spessore del bordo */
+    border-radius: 8px;         /* angoli arrotondati, opzionale */
+    padding: 10px;              /* spazio interno, opzionale */
+}
