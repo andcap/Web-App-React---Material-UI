@@ -18,8 +18,8 @@ const MainPage = () => {
           <Button color="inherit" onClick={() => setOpenLogin(true)}>Login</Button>
         </Toolbar>
       </AppBar>
-      <Container maxWidth="md" sx={{ mt: 4 }}>
-        <Paper elevation={3} sx={{ p: 4 }}>
+      <Container maxWidth="md" sx={{ mt: 1 }}>
+        <Paper elevation={5} sx={{ p: 4 }}>
           <Typography variant="h4" gutterBottom>
             Benvenuto nella tua Web Application!
           </Typography>
