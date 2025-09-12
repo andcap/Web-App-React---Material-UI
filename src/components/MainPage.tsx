@@ -5,7 +5,7 @@ import { useAuth } from './AuthContext';
 
 const MainPage = () => {
   const [openLogin, setOpenLogin] = useState(false);
-  const { email } = useAuth();
+  const { email, setEmail } = useAuth();
   // Disabilita la chiusura automatica del dialog
   const handleCloseLogin = () => setOpenLogin(false);
   return (
@@ -15,7 +15,12 @@ const MainPage = () => {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Demo Web App
           </Typography>
-          <Button color="inherit" onClick={() => setOpenLogin(true)}>Login</Button>
+          {!email && (
+            <Button color="inherit" onClick={() => setOpenLogin(true)}>Login</Button>
+          )}
+          {email && (
+            <Button color="inherit" onClick={() => {setEmail('');}}>Logout</Button>
+          )}
         </Toolbar>
       </AppBar>
       <Container maxWidth="md" sx={{ mt: 1 }}>
