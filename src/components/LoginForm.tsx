@@ -7,21 +7,23 @@ interface LoginFormProps {
 }
 
 const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
-  const { email, setEmail, password, setPassword } = useAuth();
+  const { email, setEmail} = useAuth();
+  const inputRefEmail = React.useRef<HTMLInputElement>(null);
+  const inputRefPassword = React.useRef<HTMLInputElement>(null);
   const [error, setError] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !password) {
+    if (!inputRefEmail.current?.value || !inputRefPassword.current?.value) {
       setError('Inserisci email e password');
       return;
     }
     setError('');
-    alert(`Login effettuato!\nEmail: ${email}`);
+    setEmail(inputRefEmail.current.value);
+    alert(`Login effettuato!\nEmail: ${inputRefEmail.current.value}`);
     onClose();
     // Qui puoi aggiungere la logica di autenticazione
   };
-
   return (
     <Paper elevation={3} sx={{ p: 4, maxWidth: 400, margin: '0 auto' }}>
       <Typography variant="h5" gutterBottom>Login</Typography>
@@ -29,15 +31,17 @@ const LoginForm: React.FC<LoginFormProps> = ({ onClose }) => {
         <TextField
           label="Email"
           type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
+          inputRef={inputRefEmail}
+          //value={email}
+          //onChange={e => setEmail(e.target.value)}
           required
         />
         <TextField
           label="Password"
           type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
+          inputRef={inputRefPassword}
+          //value={password}
+          //onChange={e => setPassword(e.target.value)}
           required
         />
         {error && <Typography color="error">{error}</Typography>}
